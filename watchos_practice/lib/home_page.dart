@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:watchos_practice/model/external/practice_watchos_connectivity.dart';
 import 'package:watchos_practice/model/wos_counter.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -27,11 +27,17 @@ class _MyHomePageState extends State<MyHomePage> {
   //   setState(() {});
   // }
 
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   _readCounter();
-  // }
+  @override
+  void initState() {
+    super.initState();
+    // Apple Watchからのデータを受信するリスナーを登録
+    PracticeWatchosConnectivity.connectivity.messageReceived
+        .listen((message) async {
+      /// New message is received, you can read it data map
+      print(message.data["key"]);
+      print("Flutter received message: ${message.data}");
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

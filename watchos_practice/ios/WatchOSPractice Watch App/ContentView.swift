@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var connector = PWConnector()
+    @ObservedObject var connector = PWPhoneConnector()
     
     var body: some View {
         VStack {
@@ -16,6 +16,11 @@ struct ContentView: View {
                 Text(String(connector.counter))
                     .font(.largeTitle)
                     .foregroundColor(Color.gray)
+                    .onTapGesture {
+                        connector.counter += 1
+                        let data = ["key": connector.counter]
+                        PWPhoneConnector.shared.sendMessageToPhone(data)
+                    }
                 
             }
         }

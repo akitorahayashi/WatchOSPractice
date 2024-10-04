@@ -9,7 +9,9 @@ import SwiftUI
 import WatchConnectivity
 
 
-class PWConnector: NSObject, ObservableObject, WCSessionDelegate  {
+class PWPhoneConnector: NSObject, ObservableObject, WCSessionDelegate  {
+    static let shared = PWPhoneConnector()
+    
     @Published var counter = 0
     
     override init() {
@@ -20,6 +22,19 @@ class PWConnector: NSObject, ObservableObject, WCSessionDelegate  {
             WCSession.default.activate()
         }
     }
+    
+    // iPhoneへデータを送信するメソッド
+        func sendMessageToPhone(_ data: [String: Any]) {
+            if WCSession.default.isReachable {
+                WCSession.default.sendMessage(data, replyHandler: nil) { error in
+                    print("Error sending message: \(error.localizedDescription)")
+                }
+            } else {
+                print("iPhone is not reachable")
+            }
+        }
+    
+    // --- session
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         print("activationDidCompleteWith state= \(activationState.rawValue)")
