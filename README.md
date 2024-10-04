@@ -1,2 +1,2 @@
 # WatchOSPractice
-A simple app compatible with Apple Watch that reflects your taps.
+A simple app that responds to your taps and is compatible with Apple Watch.
