@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     // Apple Watchからのデータを受信するリスナーを登録
-    PracticeWatchosConnectivity.connectivity.messageReceived
+    PracticeWatchOSConnectivity.connectivity.messageReceived
         .listen((message) async {
       /// New message is received, you can read it data map
       print(message.data["key"]);

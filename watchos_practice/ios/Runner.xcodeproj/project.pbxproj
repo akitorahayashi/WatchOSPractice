@@ -14,6 +14,7 @@
 		1BB91E192CAFEBDC009FE623 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB91E142CAFEBDC009FE623 /* ContentView.swift */; };
 		1BB91E1A2CAFEBDC009FE623 /* WatchOSPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB91E152CAFEBDC009FE623 /* WatchOSPracticeApp.swift */; };
 		1BB91E1E2CAFF09E009FE623 /* PWPhoneConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB91E1D2CAFF097009FE623 /* PWPhoneConnector.swift */; };
+		1BB91E252CB0C0C1009FE623 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB91E242CB0C0BB009FE623 /* SecondView.swift */; };
 		331C808B294A63AB00263BE5 /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C807B294A618700263BE5 /* RunnerTests.swift */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
@@ -75,6 +76,7 @@
 		1BB91E142CAFEBDC009FE623 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1BB91E152CAFEBDC009FE623 /* WatchOSPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSPracticeApp.swift; sourceTree = "<group>"; };
 		1BB91E1D2CAFF097009FE623 /* PWPhoneConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWPhoneConnector.swift; sourceTree = "<group>"; };
+		1BB91E242CB0C0BB009FE623 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		2E951A7940960F3D881032D3 /* Pods-RunnerTests.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.profile.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile.xcconfig"; sourceTree = "<group>"; };
 		317898005CB162EF1186A8AB /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		331C807B294A618700263BE5 /* RunnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerTests.swift; sourceTree = "<group>"; };
@@ -135,13 +137,22 @@
 		1BB91E162CAFEBDC009FE623 /* WatchOSPractice Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				1BB91E232CB0C097009FE623 /* ContentView */,
 				1BB91E1D2CAFF097009FE623 /* PWPhoneConnector.swift */,
 				1BB91E122CAFEBDC009FE623 /* Preview Content */,
 				1BB91E132CAFEBDC009FE623 /* Assets.xcassets */,
-				1BB91E142CAFEBDC009FE623 /* ContentView.swift */,
 				1BB91E152CAFEBDC009FE623 /* WatchOSPracticeApp.swift */,
 			);
 			path = "WatchOSPractice Watch App";
+			sourceTree = "<group>";
+		};
+		1BB91E232CB0C097009FE623 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				1BB91E242CB0C0BB009FE623 /* SecondView.swift */,
+				1BB91E142CAFEBDC009FE623 /* ContentView.swift */,
+			);
+			path = ContentView;
 			sourceTree = "<group>";
 		};
 		331C8082294A63A400263BE5 /* RunnerTests */ = {
@@ -464,6 +475,7 @@
 			files = (
 				1BB91E192CAFEBDC009FE623 /* ContentView.swift in Sources */,
 				1BB91E1E2CAFF09E009FE623 /* PWPhoneConnector.swift in Sources */,
+				1BB91E252CB0C0C1009FE623 /* SecondView.swift in Sources */,
 				1BB91E1A2CAFEBDC009FE623 /* WatchOSPracticeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

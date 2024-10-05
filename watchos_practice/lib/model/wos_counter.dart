@@ -5,6 +5,6 @@ class PWCounter {
 
   static void incrementCounter() {
     PWCounter.count += 1;
-    PracticeWatchosConnectivity.sendJsonToAppleWatch();
+    PracticeWatchOSConnectivity.sendJsonToAppleWatch();
   }
 }

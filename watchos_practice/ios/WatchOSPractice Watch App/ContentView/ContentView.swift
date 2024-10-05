@@ -7,11 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
+    
+    @State private var isSecondViewActive = false
+    
     @ObservedObject var connector = PWPhoneConnector()
     
     var body: some View {
-        VStack {
+        NavigationStack {
             VStack {
                 Text(String(connector.counter))
                     .font(.largeTitle)
@@ -21,8 +24,17 @@ struct ContentView: View {
                         let data = ["key": connector.counter]
                         PWPhoneConnector.shared.sendMessageToPhone(data)
                     }
+                Button(action: {
+                    isSecondViewActive = true
+                }) {
+                    Text("Go to Second View")
+                }
+                .navigationDestination(isPresented: $isSecondViewActive) {
+                    SecondView()
+                }
                 
             }
         }
+        
     }
 }
