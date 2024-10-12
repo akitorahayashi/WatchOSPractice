@@ -55,4 +55,16 @@ class PWPhoneConnector: NSObject, ObservableObject, WCSessionDelegate  {
         }
         
     }
+#if os(iOS)
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        // セッションが非アクティブになった時の処理
+        print("sessionDidBecomeInactive")
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        // セッションが無効化された時の処理
+        print("sessionDidDeactivate")
+        WCSession.default.activate()
+    }
+#endif
 }
