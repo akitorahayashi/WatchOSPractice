@@ -1,2 +1,2 @@
-# WatchOSPractice
-A counter app that is compatible with Apple Watch.
+## Overview 
+WatchOSPractice is a counter app that is compatible with Apple Watch.
